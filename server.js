@@ -9,7 +9,13 @@ import { Client, handle_file } from "@gradio/client";
 const app = express();
 const PORT = 3001;
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://interio-ai-interior-design.vercel.app",
+    "https://interio-ai-interior-design-4gmmqm7w6-shah-685d.vercel.app"
+  ]
+}));
 app.use(express.json({ limit: "20kb" }));
 
 const upload = multer({
