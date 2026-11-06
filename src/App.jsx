@@ -340,7 +340,7 @@ function App() {
       formData.append('budget', budget)
 
       const response = await fetch(
-        'http://localhost:3001/api/redesign',
+        'https://interio-ai-interior-design.onrender.com/api/redesign',
         {
           method: 'POST',
           body: formData,
